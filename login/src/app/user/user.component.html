@@ -1,0 +1,47 @@
+<!-- <h1>USER</h1>
+<form (ngSubmit)="onSubmit()" [formGroup]="customerForm"  class="login-form">
+    <div>
+    <div class="form-group">
+      <label >Name:</label>
+      <input type="text" id="name" formControlName="name" >
+      <div *ngIf="customerForm.get('name')?.hasError('required') && (customerForm.get('name')?.touched || customerForm.get('name')?.dirty)" class="error">
+        <span>Name is Required</span>
+    </div>
+    </div>
+   
+    <div class="form-group">
+      <label >Email:</label>
+      <input  type="email"  id="email"  formControlName="email">
+      <div *ngIf="customerForm.get('email')?.hasError('required') && (customerForm.get('email')?.touched || customerForm.get('email')?.dirty)" class="error">Email is Required</div>
+      <div *ngIf="customerForm.get('email')?.hasError('EmailValidator') && (customerForm.get('email')?.touched || customerForm.get('email')?.dirty)" class="error">Invalid Email Format</div>
+    </div>
+   
+    <div class="form-group">
+      <label >Mobile Number:</label>
+      <input type="text" id="phoneNumber" formControlName="phoneNumber" >
+      <div *ngIf="customerForm.get('phoneNumber')?.hasError('required') && (customerForm.get('phoneNumber')?.touched || customerForm.get('phoneNumber')?.dirty)" class="error">Mobile Number is Required</div>
+      <div *ngIf="customerForm.get('phoneNumber')?.hasError('MobileValidator') && (customerForm.get('phoneNumber')?.touched || customerForm.get('phoneNumber')?.dirty)" class="error">Mobile number is Invalid</div>
+     
+    </div>
+    <div class="form-group">
+      <label >Password:</label>
+      <input type="password" id="password" formControlName="password" >
+      <div *ngIf="customerForm.get('password')?.hasError('required') && (customerForm.get('password')?.touched || customerForm.get('password')?.dirty)" class="error">Password is Required</div>
+      <div *ngIf="customerForm.get('password')?.hasError('PasswordValidator') && (customerForm.get('password')?.touched || customerForm.get('password')?.dirty)" class="error">Password must be strong and contain number and special characters</div>
+    </div>
+   
+    <button type="submit" class="btn-submit">Create User</button>
+    -->
+    <!-- <ng-container>
+      <div *ngIf="customerError$ | async as error" class="error">
+        {{ error }}
+      </div>
+      <div *ngIf="customerSuccess$ | async as msg" class="success">
+        {{ msg }}
+      </div>
+    </ng-container>
+   
+    <a routerLink="/bank" class="task-list" class="task-list">Dashboard</a> -->
+    <!-- </div>
+  </form> -->
+   

@@ -1,0 +1,144 @@
+<!-- <p>navbar works!</p>
+<nav class="navbar">
+    <ul>
+        <li>Dashboard</li>
+        <li>Submit new account</li>
+    </ul>
+</nav> -->
+<div class="row">
+
+    <div class="col-sm-6 mb-3 mb-sm-0">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Customers</h5>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Customer Id</th>
+                  <th scope="col">Customer Name</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Edit</th>
+                  <th scope="col">Delete</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td></td>
+                  <td></td>
+                  <td >  <button class="task-lis editButton" (click)="editCustomer">Edit</button>
+                  </td>
+                  <td> <button  class="bgColor" (click)="deteteCustomer" >Delete</button>
+                  </td>
+                </tr>
+                
+              </tbody>
+            </table>
+            <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+          </div>
+        </div>
+      </div>
+
+    
+    <div class="col-sm-6 mb-3 mb-sm-0">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Accounts</h5>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Account Id</th>
+                <th scope="col">Customer Id</th>
+                <th scope="col">Balance</th>
+                <th scope="col">Edit</th>
+                <th scope ="col">Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td></td>
+                <td></td>
+                <td >  <button class="task-lis editButton" (click)="editCustomer">Edit</button>
+                </td>
+                <td> <button  class="bgColor" (click)="deteteCustomer" >Delete</button>
+                </td>
+                
+              </tr>
+              
+            </tbody>
+          </table>
+          <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+          <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Transactions</h5>
+          <table class="table" >
+            <thead>
+              <tr>
+                <th scope="col">Account Id</th>
+                <th scope="col">Destination Account</th>
+                <th scope="col">Balance</th>
+                <th scope="col">Date</th>
+                <!-- <th scope="col">Handle</th> -->
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Mark</td>
+                <td>Otto</td>
+                
+              </tr>
+              
+            </tbody>
+          </table>
+          <!-- <mat-paginator [pageSizeOptions]="[5,10,20]" showFirstLastButtons></mat-paginator> -->
+          <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+          <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Loan</h5>
+          <table class="table" >
+            <thead>
+              <tr>
+                <th scope="col">Loan Id</th>
+                <th scope="col">Loan Type</th>
+                <th scope="col">Tenure</th>
+                <th scope="col">Date</th>
+                <!-- <th scope="col">Handle</th> -->
+              </tr>
+            </thead>
+            <tbody>
+              <!-- <tr *ngFor="let loan of loan$ | async"> -->
+                <!-- <td>{{}}</td>
+                <td>{{}}</td> -->
+                
+              <!-- </tr> -->
+              
+            </tbody>
+          </table>
+          <!-- <mat-paginator [pageSizeOptions]="[5,10,20]" showFirstLastButtons></mat-paginator> -->
+          <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+          <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  

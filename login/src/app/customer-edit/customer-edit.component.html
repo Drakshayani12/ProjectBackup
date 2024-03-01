@@ -1,0 +1,36 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="customerForm"  class="login-form">
+    <div>
+    <div class="form-group">
+      <label >Name:</label>
+      <input type="text" id="name" formControlName="name" >
+      <div *ngIf="customerForm.get('name')?.hasError('required') && (customerForm.get('name')?.touched || customerForm.get('name')?.dirty)" class="error">
+        <span>Name is Required</span>
+    </div>
+    </div>
+
+    <div class="form-group">
+        <label >Email:</label>
+        <input type="text" id="email" formControlName="email" >
+        <div *ngIf="customerForm.get('email')?.hasError('required') && (customerForm.get('email')?.touched || customerForm.get('email')?.dirty)" class="error">
+          <span>Email is Required</span>
+      </div>
+      </div>
+
+      <div class="form-group">
+        <label >CustomerId:</label>
+        <input type="text" id="customerId" formControlName="customerId" >
+        <div *ngIf="customerForm.get('customerId')?.hasError('required') && (customerForm.get('customerId')?.touched || customerForm.get('customerId')?.dirty)" class="error">
+          <span>CustomerId is Required</span>
+      </div>
+      </div>
+
+      
+    <div class="form-group">
+        <label >Password:</label>
+        <input type="password" id="password" formControlName="password" >
+        <div *ngIf="customerForm.get('password')?.hasError('required') && (customerForm.get('password')?.touched || customerForm.get('password')?.dirty)" class="error">Password is Required</div>
+        <div *ngIf="customerForm.get('password')?.hasError('PasswordValidator') && (customerForm.get('password')?.touched || customerForm.get('password')?.dirty)" class="error">Password must be strong and contain number and special characters</div>
+      </div>
+
+    </div>
+    </form>

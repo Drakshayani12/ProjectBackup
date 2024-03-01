@@ -1,0 +1,46 @@
+<p>loan works!</p>
+<form (ngSubmit)="onSubmit()" [formGroup]="loanForm"  class="loan-form">
+    <div>
+    <div class="form-group">
+      <label >LoanType:</label>
+      <select type="text" id="loanType" formControlName="loanType" >
+        <option>Home Loan</option>
+        <option>Education Loan</option>
+        <option>Personal Loan</option>
+        <option>Car Loan</option>
+      </select>
+      
+      <div *ngIf="loanForm.get('loanType')?.hasError('required') && (loanForm.get('loanType')?.touched || loanForm.get('loanType')?.dirty)" class="error">
+        <span>LoanType is Required</span>
+    </div>
+    </div>
+   
+    <div class="form-group">
+      <label >Amount:</label>
+      <input  type="amount"  id="amount"  formControlName="amount">
+      <div *ngIf="loanForm.get('amount')?.hasError('required') && (loanForm.get('amount')?.touched || loanForm.get('amount')?.dirty)" class="error">Amount is Required</div>
+      
+    </div>
+   
+    <div class="form-group">
+        <label >Tenure:</label>
+        <input  type="tenure"  id="tenure"  formControlName="tenure">
+        <div *ngIf="loanForm.get('tenure')?.hasError('required') && (loanForm.get('tenure')?.touched || loanForm.get('tenure')?.dirty)" class="error">Tenure is Required</div>
+        
+      </div>
+
+    <button type="submit" class="btn-submit">Submit</button>
+   
+    <!-- <ng-container>
+      <div *ngIf="customerError$ | async as error" class="error">
+        {{ error }}
+      </div>
+      <div *ngIf="customerSuccess$ | async as msg" class="success">
+        {{ msg }}
+      </div>
+    </ng-container>
+   
+    <a routerLink="/bank" class="task-list" class="task-list">Dashboard</a> -->
+    </div>
+  </form>
+   

@@ -1,0 +1,49 @@
+
+<h1>Make Your Transaction</h1>
+ 
+<form (ngSubmit)="onSubmit()" [formGroup]="transactionForm" class="transaction-Form">
+    <div class="form-group">
+        <label for="accounts">Account: </label>
+        <select formControlName="accounts">
+            <option value="">Select</option>
+ 
+            <div *ngIf="transactionForm.get('accounts')?.hasError('required') && transactionForm.get('accounts')?.touched || transactionForm.get('accounts')?.dirty" class="error">
+                <span>Account number is required</span>
+            </div>
+            <!-- <option *ngFor="let account of accounts$ | async" [ngValue]="account"></option>
+            {{account.accountId}} -->
+        </select>
+    </div>
+ 
+    <div class="form-group">
+        <label for="destAccountNo">Destination Account No: </label>
+        <input type="text" id="destAccountNo" formControlName="destAccountNo"/>
+        <div *ngIf="transactionForm.get('destAccountNo')?.hasError('required') && transactionForm.get('destAccountNo')?.touched || transactionForm.get('destAccountNo')?.dirty" class="error">
+            <span>Destination Account number is required</span>
+        </div>
+       
+    </div>
+   
+ 
+    <div class="form-group">
+        <label for="amount">Amount: </label>
+        <input type="text" id="amount" formControlName="amount" />
+        <div *ngIf="transactionForm.get('amount')?.hasError('required') && transactionForm.get('amount')?.touched || transactionForm.get('amount')?.dirty" class="error">
+            <span>Amount  is required</span>
+        </div>
+ 
+    </div>
+    <div class="form-group">
+        <label for="transaction_type">Transaction Type: </label>
+        <label>
+        <input type="radio" name="transaction_type" formControlName="transactionType" value="credit"> Credit
+        </label>
+        <label>
+        <input type="radio" name="transaction_type" formControlName="transactionType" value="debit"> Debit
+        </label>
+      </div>
+
+      <div>
+        <button type="submit">Submit</button>
+  </div>
+</form>
